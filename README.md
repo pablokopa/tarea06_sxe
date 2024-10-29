@@ -1,4 +1,4 @@
-# TAREA06_SXE
+# TAREA06_SXE 🤌
 ---
 ### Creación y configuración del archivo.
 
@@ -48,10 +48,12 @@ services:
 networks:
     prestashop_network:
 ```
-Una vez terminado el documento de configuración, lo lanzamos utilizando:
+Una vez terminado el archivo de configuración, lo lanzamos utilizando:
 ```bash
 sudo docker compose up -d
 ```
+**Importante hacerlo desde el directorio en el que se encuentra el archivo de configuración ⚠️**
+
 ![imagen](https://github.com/user-attachments/assets/8f2eb580-57c9-4b74-ae53-4046b48d34af)
 
 </details>
@@ -64,19 +66,18 @@ sudo docker compose up -d
 # Utilizo en el navegador la ip de mi ordenador con el puerto seleccionado
 10.0.9.153:8080
 ```
-Una vez comprobado que todo funciona correctamente, me pongo a configurar todo desde el navegador:
+Una vez comprobado que todo funciona correctamente, me pongo a configurar todo desde el navegador ✅
 
 **1. Asistente de instalación:**
   ![imagen](https://github.com/user-attachments/assets/6478ecce-f01d-4f02-99e1-f67ffc675c15)
   Indico el idioma y continuo...
   
-**2. Se aceptan los terminos y condiciones:**
-  ![imagen](https://github.com/user-attachments/assets/da8d4f4a-619d-484c-957e-23b0cadca3f7)
+**2. Se aceptan los terminos y condiciones.**
 
 **3. Configuración de los datos de la tienda:**
   ![imagen](https://github.com/user-attachments/assets/350e1a67-324e-4e9f-b287-bf61a5174097)
 
-**4. Configuración del contenido de la tienda:**
+**4. Configuración del contenido que queremos en la tienda:**
   ![imagen](https://github.com/user-attachments/assets/eacfeee2-1ade-479b-aa2c-77417cdcab61)
 
 **5. Configuración de la base de datos:**
@@ -92,20 +93,31 @@ Una vez comprobado que todo funciona correctamente, me pongo a configurar todo d
 <details>
 <summary> <b> 4. Para que la tienda funcione correctamente: </b></summary>
 <br>
-Es necesario eliminar la carpeta "install" por razones de seguridad:
-  
+  <details>
+<summary> <b> Es necesario eliminar la carpeta "install" y cambiar el nombre de la carpeta "admin" por razones de seguridad ⚠️</b></summary>
+<br>
+
+![imagen](https://github.com/user-attachments/assets/aa14cb0b-34a5-4513-94d5-aced6c2f93b9)
+</details>
+
 ```bash
 # Eliminar carpeta install
 sudo docker exec -it prestashop rm -rf /var/www/html/install
+
+# Cambiar nombre de la carpeta admin
+sudo docker exec -it prestashop mv /var/www/html/admin /var/www/html/admin552vw8sb9uvj8ucjobz
 ```
 
 A continuación se entra en el siguiente enlace y nos pedirá iniciar sesión con los datos introducidos anteriormente:
 
 ```bash
-10.0.9.153:8080/admin
+http://10.0.9.153:8080/admin552vw8sb9uvj8ucjobz
 ```
+![imagen](https://github.com/user-attachments/assets/51e932d6-49f7-4f3b-9cd5-82fad592cdff)
 
-Una vez iniciada sesión, ya podremos usar y personalizar la tienda como queramos.
+Una vez iniciada sesión, ya podremos **usar y personalizar** la tienda como queramos. 🤙
+
+![imagen](https://github.com/user-attachments/assets/35fd5b2c-3068-40ea-87dd-0051bbd2032d)
 </details>
 
 
