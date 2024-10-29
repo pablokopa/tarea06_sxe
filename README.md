@@ -48,6 +48,12 @@ services:
 networks:
     prestashop_network:
 ```
+Una vez terminado el documento de configuración, lo lanzamos utilizando:
+```bash
+sudo docker compose up -d
+```
+![imagen](https://github.com/user-attachments/assets/8f2eb580-57c9-4b74-ae53-4046b48d34af)
+
 </details>
 
 <details>
@@ -68,6 +74,13 @@ Una vez comprobado que todo funciona correctamente, me pongo a configurar todo d
   ![imagen](https://github.com/user-attachments/assets/da8d4f4a-619d-484c-957e-23b0cadca3f7)
 
 **3. Configuración de los datos de la tienda:**
-  ![imagen](https://github.com/user-attachments/assets/248035a7-d553-4d29-9cb2-380cbe648b3c)
+  ![imagen](https://github.com/user-attachments/assets/350e1a67-324e-4e9f-b287-bf61a5174097)
+
+**4. Configuración del contenido de la tienda:**
+  ![imagen](https://github.com/user-attachments/assets/eacfeee2-1ade-479b-aa2c-77417cdcab61)
+
+**5. Configuración de la base de datos:**
+  ![imagen](https://github.com/user-attachments/assets/3878e819-41e2-4963-93c7-ac93202ee2e9)
+  En este apartado no se por que motivo da problemas de conexión a la base de datos...
 
 </details>
