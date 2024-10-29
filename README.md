@@ -80,7 +80,32 @@ Una vez comprobado que todo funciona correctamente, me pongo a configurar todo d
   ![imagen](https://github.com/user-attachments/assets/eacfeee2-1ade-479b-aa2c-77417cdcab61)
 
 **5. Configuración de la base de datos:**
-  ![imagen](https://github.com/user-attachments/assets/3878e819-41e2-4963-93c7-ac93202ee2e9)
-  En este apartado no se por que motivo da problemas de conexión a la base de datos...
+  ![imagen](https://github.com/user-attachments/assets/30ccbcef-f46f-4af7-975c-f31dc1a9a4ce)
 
+**6. Comienza a cargar la tienda entera:**
+  ![imagen](https://github.com/user-attachments/assets/6235109c-acf1-46e4-bcd1-00f949f56085)
+
+**7. Finalizada la instalación:**
+  ![imagen](https://github.com/user-attachments/assets/2ae5c256-aa9c-45e9-8024-16c17a57ad1b)
 </details>
+
+<details>
+<summary> <b> 4. Para que la tienda funcione correctamente: </b></summary>
+<br>
+Es necesario eliminar la carpeta "install" por razones de seguridad:
+  
+```bash
+# Eliminar carpeta install
+sudo docker exec -it prestashop rm -rf /var/www/html/install
+```
+
+A continuación se entra en el siguiente enlace y nos pedirá iniciar sesión con los datos introducidos anteriormente:
+
+```bash
+10.0.9.153:8080/admin
+```
+
+Una vez iniciada sesión, ya podremos usar y personalizar la tienda como queramos.
+</details>
+
+
